@@ -1,18 +1,24 @@
 {
-	"manufacturer": "PandaKB.COM",
-	"keyboard_name": "Sofle Choc",
-	"maintainer": "PandaKB.COM",
-	"diode_direction": "COL2ROW",
-	"url": "https://github.com/josefadamcik/SofleKeyboard",
-	"usb": {
-		"vid": "0xFC32",
-		"pid": "0x0287",
-		"device_version": "1.0.0"
-	},
+    "manufacturer": "domiSchenk",
+    "keyboard_name": "sofle_choc/dos",
+    "maintainer": "domiSchenk",
+    "diode_direction": "COL2ROW",
+    "build": {
+        "lto": true
+    },
+    "features": {
+        "bootmagic": true,
+        "extrakey": false,
+        "mousekey": true,
+        "nkro": true,
+        "oled": true,
+        "rgb_matrix": true
+            },
 	"encoder": {
 		"rotary": [{ "pin_a": "GP28", "pin_b": "GP29" }]
 	},
 	"rgb_matrix": {
+        "driver": "ws2812",
 		"split_count": [29, 29],
 		"layout": [
 			{ "flags": 4, "matrix": [0, 5], "x": 95, "y": 7 },
@@ -77,6 +83,7 @@
 		]
 	},
 	"split": {
+        "enabled": true,
 		"encoder": {
 			"right": {
 				"rotary": [{ "pin_a": "GP29", "pin_b": "GP28" }]
@@ -86,11 +93,17 @@
 	"ws2812": {
 		"pin": "GP0"
 	},
-	"matrix_pins": {
+    "matrix_pins": {
 		"cols": [27, 26, 22, 20, 23, 21],
 		"rows": [5, 6, 7, 8, 9]
-	},
-	"layouts": {
+    },
+    "url": "",
+    "usb": {
+        "device_version": "1.0.1",
+        "vid": "0xFC32",
+        "pid": "0x0287"
+    },
+    "layouts": {
 		"LAYOUT": {
 			"layout": [
 				{ "matrix": [0, 0], "x": 0, "y": 0.5 },
@@ -155,5 +168,5 @@
 				{ "matrix": [9, 0], "x": 14, "y": 4.375 }
 			]
 		}
-	}
+    }
 }
